@@ -1,0 +1,12 @@
+def sequential_search(arr, target):
+    for index, value in enumerate(arr):
+        if value == target:
+            return index
+    return -1
+arr = [2, 3, 1, 7, 9, 4, 6, 8]
+target = 7
+index = sequential_search(arr, target)
+if index != -1:
+    print(f"Element {target} found at index {index}.")
+else:
+    print(f"Element {target} not found in the array.")
