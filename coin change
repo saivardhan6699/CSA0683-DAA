@@ -1,0 +1,21 @@
+# Define all denominations of Indian Currency
+coins = [1, 2, 5, 10, 20, 50, 100, 200, 2000]
+
+def findMin(cost):
+    coinList = []
+    for coin in reversed(coins):
+        while cost >= coin:
+            cost -= coin
+            coinList.append(coin)
+    return coinList
+
+def main():
+    n = int(input("Enter an amount: "))
+    print(f"Following is minimal number of change for {n}: ", end="")
+    result = findMin(n)
+    for coin in result:
+        print(coin, end=" ")
+    print()
+
+if __name__ == "__main__":
+    main()
